@@ -19,9 +19,12 @@ Grey dark 3: #999
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
   --color-grey-light-4: #ccc;
+  --color-white: #fff;
+  --color-black: #000;
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
-  --color-grey-dark-3: #999; }
+  --color-grey-dark-3: #999;
+  --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .3); }
 
 * {
   margin: 0;
@@ -45,3 +48,26 @@ body {
   font-weight: 400;
   line-height: 1.6;
   min-height: 100vh; }
+
+.container {
+  background-color: var(--color-grey-light-1);
+  box-shadow: var(--shadow-dark-1);
+  margin: 8rem auto;
+  max-width: 120rem;
+  min-height: 50rem; }
+
+.header {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-grey-light-2);
+  height: 7rem; }
+
+.content {
+  display: flex; }
+
+.sidebar {
+  background-color: var(--color-grey-dark-1);
+  flex: 0 0 18%; }
+
+.hotel-view {
+  background-color: var(--color-white);
+  flex: 1; }
