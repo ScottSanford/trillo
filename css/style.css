@@ -49,6 +49,21 @@ body {
   line-height: 1.6;
   min-height: 100vh; }
 
+.logo {
+  height: 3.25rem; }
+
+.search__icon {
+  height: 2rem;
+  width: 2rem; }
+
+.user-nav__icon {
+  height: 2.25rem;
+  width: 2.25rem; }
+
+.user-nav__user-photo {
+  border-radius: 50%;
+  height: 3.75rem; }
+
 .container {
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark-1);
