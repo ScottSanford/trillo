@@ -24,11 +24,16 @@
 // Flex Item
 .sidebar {
     background-color: var(--color-grey-dark-1);
+    display: flex;
     flex: 0 0 18%; // no grow, no shrink, keep width at 18%
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 // Flex Item
 .hotel-view {
     background-color: var(--color-white);
+    background-color: orangered;
+    height: 80rem;
     flex: 1; // grow as much space as you can
 }
