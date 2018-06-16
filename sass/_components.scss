@@ -191,3 +191,54 @@
     padding: 2.5rem;
     text-align: center;
 }
+
+
+////////////////////////////////////////////////
+// GALLERY
+.gallery {
+    display: flex;
+
+    &__photo {
+        display: block;
+        width: 100%; // always define a % width for responsive images
+    }
+}
+
+
+////////////////////////////////////////////////
+// HOTEL OVERVIEW
+.overview {
+    display: flex;
+
+    &__heading {
+
+    }
+
+    &__stars {
+        //flex: 1; // occupy and grows but takes up white space.
+        margin-right: auto; // pushes content on the right all the way to the other side.
+    }
+
+    &__icon-star,
+    &__icon-location {
+        fill: var(--color-primary);
+        height: 1.75rem;
+        width: 1.75rem;
+    }
+
+    &__location {
+
+    }
+
+    &__rating {
+
+    }
+
+    &__rating-average {
+
+    }
+
+    &__rating-count {
+
+    }
+}
