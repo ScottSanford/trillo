@@ -1,16 +1,3 @@
-/*
-COLORS
-
-Grey light 1: #faf9f9
-Grey light 2: #f4f2f2
-Grey light 3: #f0eeee
-Grey light 4: #ccc
-
-Grey dark 1: #333
-Grey dark 2: #777
-Grey dark 3: #999
-
-*/
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
@@ -24,7 +11,9 @@ Grey dark 3: #999
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
-  --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .3); }
+  --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .3);
+  --shadow-light-1: 0 2rem 5rem rgba(0, 0, 0, .06);
+  --line: 1px solid var(--color-grey-light-2); }
 
 * {
   margin: 0;
@@ -181,7 +170,7 @@ body {
 
 .overview {
   align-items: center;
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
   display: flex; }
   .overview__heading {
     font-size: 2.25rem;
@@ -247,6 +236,48 @@ body {
     box-shadow: none;
     transform: scale(1); } }
 
+.paragraph:not(:last-of-type) {
+  margin-bottom: 2rem; }
+
+.list {
+  border-bottom: var(--line);
+  border-top: var(--line);
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 3rem 0;
+  padding: 3rem; }
+  .list__item {
+    flex: 0 0 50%;
+    margin-bottom: .7rem; }
+  .list__item::before {
+    content: '';
+    display: inline-block;
+    height: 1rem;
+    margin-right: .7rem;
+    width: 1rem;
+    background-color: var(--color-primary);
+    -webkit-mask-image: url("../img/chevron-thin-right.svg");
+    -webkit-mask-size: cover;
+    mask-image: url("../img/chevron-thin-right.svg");
+    mask-size: cover; }
+
+.recommend {
+  align-items: center;
+  font-size: 1.3rem;
+  color: var(--color-grey-dark-3);
+  display: flex; }
+  .recommend__count {
+    margin-right: auto; }
+  .recommend__photo {
+    border: 3px solid var(--color-white);
+    border-radius: 50%;
+    box-sizing: content-box;
+    height: 4rem;
+    width: 4rem; }
+    .recommend__photo:not(:last-child) {
+      margin-right: -1.5rem; }
+
 .container {
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark-1);
@@ -257,7 +288,7 @@ body {
 .header {
   align-items: center;
   background-color: var(--color-white);
-  border-bottom: 1px solid var(--color-grey-light-2);
+  border-bottom: var(--line);
   display: flex;
   font-size: 1.4rem;
   height: 7rem;
@@ -275,5 +306,22 @@ body {
 
 .hotel-view {
   background-color: var(--color-white);
-  height: 80rem;
+  flex: 1; }
+
+.detail {
+  background-color: var(--color-grey-light-1);
+  border-bottom: var(--line);
+  display: flex;
+  padding: 4.5rem; }
+
+.description {
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-light-1);
+  flex: 0 0 60%;
+  font-size: 1.4rem;
+  margin-right: 4.5rem;
+  padding: 3rem; }
+
+.user-reviews {
+  background-color: yellowgreen;
   flex: 1; }
