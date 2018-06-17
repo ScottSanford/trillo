@@ -4,6 +4,12 @@
     margin: 8rem auto;
     max-width: 120rem; // 1200px
     min-height: 50rem;
+
+    @media only screen and (max-width: $bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 .header {
@@ -19,6 +25,10 @@
 // Flex Container
 .content {
     display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+    }
 }
 
 // Flex Item
@@ -42,6 +52,10 @@
     display: flex;
     font-size: 1.4rem;
     padding: 4.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 3rem;
+    }
 }
 
 .description {
@@ -50,6 +64,11 @@
     flex: 0 0 60%;
     margin-right: 4.5rem;
     padding: 3rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
 }
 
 .user-reviews {
