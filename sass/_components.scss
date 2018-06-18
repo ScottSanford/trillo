@@ -75,6 +75,7 @@
     align-items: center;
     align-self: stretch; // override the flex container align-items: center
     display: flex; // nested flexbox container
+    position: relative;
 
     & > * {
         cursor: pointer;
@@ -120,11 +121,67 @@
         display: flex;
     }
 
+    
     &__user-photo {
         border-radius: 50%;
         height: 3.75rem;
         margin-right: 1rem;
     }
+    
+    &__user:hover + &__dropdown { // sibling element
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__dropdown {
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        transition: all .3s;
+        visibility: hidden;
+        width: 100%; // parent element width
+        z-index: 100;
+
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__dropdown-list {
+        list-style: none;
+        position: relative;
+    }
+
+    &__dropdown-item {
+        background-color: var(--color-grey-light-1);
+        cursor: pointer;
+
+        &:hover {
+            background-color: var(--color-grey-light-3);
+        }
+    }
+
+    &__dropdown-link:link,
+    &__dropdown-link:visited {
+        align-items: center;
+        color: var(--color-grey-dark-1);
+        display: flex;
+        padding: 2.5rem 3.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        z-index: 10;
+    }
+
+    &__dropdown-icon {
+        fill: currentColor;
+        height: 1.75rem;
+        width: 1.75rem;
+        margin-right: 2rem;
+    }
+
 }
 
 
@@ -406,15 +463,19 @@
         width: 1rem;
         
         // Older browsers
-        // background-image: url('../img/chevron-thin-right.svg');
-        // background-size: cover;
+        background-image: url('../img/chevron-thin-right.svg');
+        background-size: cover;
 
         // Newer browsers -- masks
-        background-color: var(--color-primary);
-        -webkit-mask-image: url('../img/chevron-thin-right.svg');
-        -webkit-mask-size: cover;
-        mask-image: url('../img/chevron-thin-right.svg');
-        mask-size: cover;
+        @supports ((mask-image: url()) or  (-webkit-mask-image: url())) {
+            background-color: var(--color-primary);
+            -webkit-mask-image: url('../img/chevron-thin-right.svg');
+            -webkit-mask-size: cover;
+            mask-image: url('../img/chevron-thin-right.svg');
+            mask-size: cover;
+
+            background-image: none; // background image is still being applied
+        }
     }
 }
 
