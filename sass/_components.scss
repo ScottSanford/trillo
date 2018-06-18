@@ -139,7 +139,7 @@
         position: absolute;
         right: 0;
         top: 100%;
-        transition: all .3s;
+        transition: all .5s;
         visibility: hidden;
         width: 100%; // parent element width
         z-index: 100;
@@ -156,11 +156,12 @@
     }
 
     &__dropdown-item {
-        background-color: var(--color-grey-light-1);
+        background-color: var(--color-grey-light-2);
         cursor: pointer;
+        transition: all .3s;
 
         &:hover {
-            background-color: var(--color-grey-light-3);
+            background-color: var(--color-grey-light-4);
         }
     }
 
@@ -297,7 +298,12 @@
 
     &__photo {
         display: block;
+        transition: all .3s;
         width: 100%; // always define a % width for responsive images
+
+        &:hover {
+            filter: brightness(.75);
+        }
     }
 }
 

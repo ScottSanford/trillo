@@ -135,7 +135,7 @@ body {
     position: absolute;
     right: 0;
     top: 100%;
-    transition: all .3s;
+    transition: all .5s;
     visibility: hidden;
     width: 100%;
     z-index: 100; }
@@ -146,10 +146,11 @@ body {
     list-style: none;
     position: relative; }
   .user-nav__dropdown-item {
-    background-color: var(--color-grey-light-1);
-    cursor: pointer; }
+    background-color: var(--color-grey-light-2);
+    cursor: pointer;
+    transition: all .3s; }
     .user-nav__dropdown-item:hover {
-      background-color: var(--color-grey-light-3); }
+      background-color: var(--color-grey-light-4); }
   .user-nav__dropdown-link:link, .user-nav__dropdown-link:visited {
     align-items: center;
     color: var(--color-grey-dark-1);
@@ -237,7 +238,10 @@ body {
   display: flex; }
   .gallery__photo {
     display: block;
+    transition: all .3s;
     width: 100%; }
+    .gallery__photo:hover {
+      filter: brightness(0.75); }
 
 .overview {
   align-items: center;
