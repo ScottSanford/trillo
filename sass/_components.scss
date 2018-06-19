@@ -128,11 +128,77 @@
         margin-right: 1rem;
     }
     
-    &__user:hover + &__dropdown { // sibling element
+    &__chat:hover ~ &__messages { // sibling element
         opacity: 1;
         visibility: visible;
     }
+    
+    // Messages Dropdown
+    &__messages {
+        opacity: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        right: 10rem;
+        visibility: hidden;
+        transition: all .5s;
+        width: 35rem;
+        z-index: 100;
 
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+
+    &__message-photo {
+        border-radius: 50%;
+        height: 5rem;
+        margin-right: 1rem;
+    }
+
+    &__message-link:link,
+    &__message-link:visited {
+        align-items: center;
+        border-bottom: var(--line-2);
+        color: var(--color-grey-dark-1);
+        display: flex;
+        padding: 1.5rem 2rem;
+        text-decoration: none;
+        z-index: 10;
+    }
+
+    &__message-content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__message-name {
+        margin-right: auto;
+        font-weight: 600;
+    }
+
+    &__message {
+        color: var(--color-grey-dark-2);
+        flex: 0 0 100%;
+    }
+
+    &__view-more {
+        align-items: center;
+        background-color: var(--color-grey-light-1);
+        display: flex;
+        justify-content: space-between;
+        padding: 1.5rem 2rem;
+    }
+    
+    &__user:hover ~ &__dropdown { // sibling element
+        opacity: 1;
+        visibility: visible;
+        z-index: 100;
+    }
+
+    // User Dropdown
     &__dropdown {
         opacity: 0;
         padding: 0;
@@ -142,7 +208,6 @@
         transition: all .5s;
         visibility: hidden;
         width: 100%; // parent element width
-        z-index: 100;
 
         &:hover {
             opacity: 1;
@@ -150,11 +215,13 @@
         }
     }
 
+    &__message-list,
     &__dropdown-list {
         list-style: none;
         position: relative;
     }
 
+    &__message-item,
     &__dropdown-item {
         background-color: var(--color-grey-light-2);
         cursor: pointer;
@@ -163,6 +230,10 @@
         &:hover {
             background-color: var(--color-grey-light-4);
         }
+    }
+
+    &__dropdown-item:not(:last-child) {
+        border-bottom: var(--line-2);
     }
 
     &__dropdown-link:link,
@@ -174,6 +245,7 @@
         text-decoration: none;
         text-transform: uppercase;
         z-index: 10;
+
     }
 
     &__dropdown-icon {

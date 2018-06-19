@@ -13,7 +13,8 @@
   --color-grey-dark-3: #999;
   --shadow-dark-1: 0 2rem 6rem rgba(0, 0, 0, .3);
   --shadow-light-1: 0 2rem 5rem rgba(0, 0, 0, .06);
-  --line: 1px solid var(--color-grey-light-2); }
+  --line: 1px solid var(--color-grey-light-2);
+  --line-2: 1px solid var(--color-grey-light-4); }
 
 * {
   margin: 0;
@@ -126,9 +127,54 @@ body {
     border-radius: 50%;
     height: 3.75rem;
     margin-right: 1rem; }
-  .user-nav__user:hover + .user-nav__dropdown {
+  .user-nav__chat:hover ~ .user-nav__messages {
     opacity: 1;
     visibility: visible; }
+  .user-nav__messages {
+    opacity: 0;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    right: 10rem;
+    visibility: hidden;
+    transition: all .5s;
+    width: 35rem;
+    z-index: 100; }
+    .user-nav__messages:hover {
+      opacity: 1;
+      visibility: visible; }
+  .user-nav__message-photo {
+    border-radius: 50%;
+    height: 5rem;
+    margin-right: 1rem; }
+  .user-nav__message-link:link, .user-nav__message-link:visited {
+    align-items: center;
+    border-bottom: var(--line-2);
+    color: var(--color-grey-dark-1);
+    display: flex;
+    padding: 1.5rem 2rem;
+    text-decoration: none;
+    z-index: 10; }
+  .user-nav__message-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; }
+  .user-nav__message-name {
+    margin-right: auto;
+    font-weight: 600; }
+  .user-nav__message {
+    color: var(--color-grey-dark-2);
+    flex: 0 0 100%; }
+  .user-nav__view-more {
+    align-items: center;
+    background-color: var(--color-grey-light-1);
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 2rem; }
+  .user-nav__user:hover ~ .user-nav__dropdown {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100; }
   .user-nav__dropdown {
     opacity: 0;
     padding: 0;
@@ -137,20 +183,21 @@ body {
     top: 100%;
     transition: all .5s;
     visibility: hidden;
-    width: 100%;
-    z-index: 100; }
+    width: 100%; }
     .user-nav__dropdown:hover {
       opacity: 1;
       visibility: visible; }
-  .user-nav__dropdown-list {
+  .user-nav__message-list, .user-nav__dropdown-list {
     list-style: none;
     position: relative; }
-  .user-nav__dropdown-item {
+  .user-nav__message-item, .user-nav__dropdown-item {
     background-color: var(--color-grey-light-2);
     cursor: pointer;
     transition: all .3s; }
-    .user-nav__dropdown-item:hover {
+    .user-nav__message-item:hover, .user-nav__dropdown-item:hover {
       background-color: var(--color-grey-light-4); }
+  .user-nav__dropdown-item:not(:last-child) {
+    border-bottom: var(--line-2); }
   .user-nav__dropdown-link:link, .user-nav__dropdown-link:visited {
     align-items: center;
     color: var(--color-grey-dark-1);
