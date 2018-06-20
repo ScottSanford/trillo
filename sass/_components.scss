@@ -128,22 +128,50 @@
         margin-right: 1rem;
     }
     
-    &__chat:hover ~ &__messages { // sibling element
+    &__notify:hover + &__notifications,
+    &__chat:hover + &__messages,
+    &__user:hover + &__dropdown {
         opacity: 1;
         visibility: visible;
+        z-index: 100;
     }
     
     // Messages Dropdown
-    &__messages {
+    &--is-bold {
+        font-weight: 600;
+    }
+
+    &__notifications,
+    &__messages,
+    &__dropdown {
         opacity: 0;
         padding: 0;
         position: absolute;
         top: 100%;
-        right: 10rem;
         visibility: hidden;
         transition: all .5s;
+        z-index: 0;
+
+        &:hover {
+            opacity: 1;
+            visibility: visible;
+            z-index: 100;
+        }
+    }
+
+    &__notifications {
+        right: 15rem;
         width: 35rem;
-        z-index: 100;
+    }
+
+    &__messages {
+        right: 10rem;
+        width: 35rem;
+    }
+
+    &__dropdown {
+        right: 0;
+        width: 100%; // parent element width
 
         &:hover {
             opacity: 1;
@@ -157,6 +185,8 @@
         margin-right: 1rem;
     }
 
+    &__notification-link:link,
+    &__notification-link:visited,
     &__message-link:link,
     &__message-link:visited {
         align-items: center;
@@ -166,6 +196,40 @@
         padding: 1.5rem 2rem;
         text-decoration: none;
         z-index: 10;
+    }
+    
+    &__dropdown-link:link,
+    &__dropdown-link:visited {
+        align-items: center;
+        color: var(--color-grey-dark-1);
+        display: flex;
+        padding: 2.5rem 3.5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        z-index: 10;
+
+    }
+
+    &__notification-link:link,
+    &__notification-link:visited {
+        justify-content: space-between;
+        padding: 2.5rem;
+    }
+
+    &__notification-message {
+        flex: 0 0 70%;
+    }
+
+    &__notification-date {
+        align-self: flex-start;
+    }
+
+    &__see-all {
+        align-items: center;
+        background-color: var(--color-grey-light-1);
+        display: flex;
+        justify-content: center;
+        padding: 1.5rem 2rem;
     }
 
     &__message-content {
@@ -191,36 +255,15 @@
         justify-content: space-between;
         padding: 1.5rem 2rem;
     }
-    
-    &__user:hover ~ &__dropdown { // sibling element
-        opacity: 1;
-        visibility: visible;
-        z-index: 100;
-    }
 
-    // User Dropdown
-    &__dropdown {
-        opacity: 0;
-        padding: 0;
-        position: absolute;
-        right: 0;
-        top: 100%;
-        transition: all .5s;
-        visibility: hidden;
-        width: 100%; // parent element width
-
-        &:hover {
-            opacity: 1;
-            visibility: visible;
-        }
-    }
-
+    &__notification-list,
     &__message-list,
     &__dropdown-list {
         list-style: none;
         position: relative;
     }
 
+    &__notification-item,
     &__message-item,
     &__dropdown-item {
         background-color: var(--color-grey-light-2);
@@ -236,18 +279,7 @@
         border-bottom: var(--line-2);
     }
 
-    &__dropdown-link:link,
-    &__dropdown-link:visited {
-        align-items: center;
-        color: var(--color-grey-dark-1);
-        display: flex;
-        padding: 2.5rem 3.5rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        z-index: 10;
-
-    }
-
+    &__notification-icon,
     &__dropdown-icon {
         fill: currentColor;
         height: 1.75rem;
