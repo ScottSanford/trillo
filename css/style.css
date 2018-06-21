@@ -50,7 +50,8 @@ body {
   align-items: center;
   display: flex;
   flex: 0 0 40%;
-  justify-content: center; }
+  justify-content: center;
+  position: relative; }
   @media only screen and (max-width: 31.25em) {
     .search {
       background-color: var(--color-grey-light-2);
@@ -87,6 +88,38 @@ body {
     fill: var(--color-grey-dark-3);
     height: 2rem;
     width: 2rem; }
+  .search__input:focus ~ .search__latest-searches {
+    opacity: 1;
+    visibility: visible;
+    width: 100%; }
+  .search__latest-searches {
+    background-color: var(--color-white);
+    border-radius: .8rem;
+    box-shadow: var(--shadow-dark-1);
+    opacity: 0;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 4.5rem;
+    transition: all .5s;
+    visibility: hidden;
+    width: 90%;
+    z-index: 100; }
+  .search__title {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem; }
+  .search__list {
+    list-style: none; }
+  .search__query {
+    align-items: center;
+    display: flex;
+    padding: 1rem .5rem; }
+    .search__query:hover {
+      background-color: var(--color-grey-light-2); }
+    .search__query:last-of-type {
+      margin-bottom: 2rem; }
+  .search__icon {
+    margin-right: 1rem; }
 
 .user-nav {
   align-items: center;
@@ -148,7 +181,7 @@ body {
       visibility: visible;
       z-index: 100; }
   .user-nav__notifications {
-    right: 15rem;
+    right: 16rem;
     width: 35rem; }
   .user-nav__messages {
     right: 10rem;
