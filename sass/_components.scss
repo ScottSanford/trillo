@@ -86,6 +86,11 @@
         visibility: hidden;
         width: 90%;
         z-index: 100;
+
+        @media only screen and (max-width: $bp-smallest) {
+            border-radius: 0;
+            top: 100%;
+        }
     }
 
     &__title {
@@ -106,10 +111,6 @@
         &:hover {
             background-color: var(--color-grey-light-2);
         }
-
-        &:last-of-type {
-            margin-bottom: 2rem;
-        }
     }
 
     &__icon {
@@ -117,6 +118,10 @@
     }
 }
 
+// utility
+.u--margin-bottom-small {
+    margin-bottom: 2rem;
+}
 
 ////////////////////////////////////////////////
 // USER NAVIGATION
@@ -130,6 +135,10 @@
         cursor: pointer;
         height: 100%;
         padding: 0 2rem;
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 2.1rem;
+        }
     }
 
     & > *:hover {
@@ -163,6 +172,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        @media only screen and (max-width: $bp-smallest) {
+            top: 2rem;
+        }
     }
 
     &__user {
@@ -242,7 +255,7 @@
         border-bottom: var(--line-2);
         color: var(--color-grey-dark-1);
         display: flex;
-        padding: 1.5rem 2rem;
+        padding: 2rem;
         text-decoration: none;
         z-index: 10;
     }
@@ -262,11 +275,14 @@
     &__notification-link:link,
     &__notification-link:visited {
         justify-content: space-between;
-        padding: 2.5rem;
     }
 
     &__notification-message {
-        flex: 0 0 70%;
+        flex: 0 0 69%;
+
+        @media only screen and (min-width: $bp-largest) {
+            flex: 0 0 65%;
+        }
     }
 
     &__notification-date {
@@ -468,6 +484,7 @@
         pointer-events: none; // removes flickering
         top: 50%;
         transform: translate(-50%, -50%);
+        visibility: visible;
     }
 
     &__caption {
@@ -481,6 +498,7 @@
         top: 0%;
         transform: translate(-50%, -50%);
         transition: all .2s;
+        visibility: hidden;
         width: 100%;
     }
 }
@@ -778,6 +796,10 @@
         font-weight: 300;
         margin-bottom: 2.5rem;
         text-transform: uppercase;
+
+        @media only screen and (max-width: $bp-smallest) {
+            padding: 0 2rem;
+        }
     }
 }
 

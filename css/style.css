@@ -104,6 +104,10 @@ body {
     visibility: hidden;
     width: 90%;
     z-index: 100; }
+    @media only screen and (max-width: 31.25em) {
+      .search__latest-searches {
+        border-radius: 0;
+        top: 100%; } }
   .search__title {
     display: flex;
     justify-content: space-between;
@@ -116,10 +120,11 @@ body {
     padding: 1rem .5rem; }
     .search__query:hover {
       background-color: var(--color-grey-light-2); }
-    .search__query:last-of-type {
-      margin-bottom: 2rem; }
   .search__icon {
     margin-right: 1rem; }
+
+.u--margin-bottom-small {
+  margin-bottom: 2rem; }
 
 .user-nav {
   align-items: center;
@@ -130,6 +135,9 @@ body {
     cursor: pointer;
     height: 100%;
     padding: 0 2rem; }
+    @media only screen and (max-width: 31.25em) {
+      .user-nav > * {
+        padding: 2.1rem; } }
   .user-nav > *:hover {
     background-color: var(--color-grey-light-2); }
   .user-nav__icon-box {
@@ -153,6 +161,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center; }
+    @media only screen and (max-width: 31.25em) {
+      .user-nav__notification {
+        top: 2rem; } }
   .user-nav__user {
     align-items: center;
     display: flex; }
@@ -201,7 +212,7 @@ body {
     border-bottom: var(--line-2);
     color: var(--color-grey-dark-1);
     display: flex;
-    padding: 1.5rem 2rem;
+    padding: 2rem;
     text-decoration: none;
     z-index: 10; }
   .user-nav__dropdown-link:link, .user-nav__dropdown-link:visited {
@@ -213,10 +224,12 @@ body {
     text-transform: uppercase;
     z-index: 10; }
   .user-nav__notification-link:link, .user-nav__notification-link:visited {
-    justify-content: space-between;
-    padding: 2.5rem; }
+    justify-content: space-between; }
   .user-nav__notification-message {
-    flex: 0 0 70%; }
+    flex: 0 0 69%; }
+    @media only screen and (min-width: 75em) {
+      .user-nav__notification-message {
+        flex: 0 0 65%; } }
   .user-nav__notification-date {
     align-self: flex-start; }
   .user-nav__see-all {
@@ -341,7 +354,8 @@ body {
     opacity: 1;
     pointer-events: none;
     top: 50%;
-    transform: translate(-50%, -50%); }
+    transform: translate(-50%, -50%);
+    visibility: visible; }
   .gallery__caption {
     color: var(--color-white);
     font-weight: 600;
@@ -353,6 +367,7 @@ body {
     top: 0%;
     transform: translate(-50%, -50%);
     transition: all .2s;
+    visibility: hidden;
     width: 100%; }
 
 .overview {
@@ -549,6 +564,9 @@ body {
     font-weight: 300;
     margin-bottom: 2.5rem;
     text-transform: uppercase; }
+    @media only screen and (max-width: 31.25em) {
+      .cta__book-now {
+        padding: 0 2rem; } }
 
 .btn {
   background-image: linear-gradient(to right, var(--color-primary-light), var(--color-primary-dark));
@@ -607,7 +625,8 @@ body {
     .header {
       align-content: space-around;
       flex-wrap: wrap;
-      height: 11rem; } }
+      height: 11rem;
+      margin-bottom: 1.5rem; } }
 
 .content {
   display: flex; }
