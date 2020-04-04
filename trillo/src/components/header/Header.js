@@ -1,7 +1,7 @@
 import React from 'react'
 import './Header.css'
 import SearchInput from './search-input/search-input'
-import Navigation from './navigation/navigation'
+import Navigation from './navigation/Navigation'
 
 export default function Header() {
   return (
