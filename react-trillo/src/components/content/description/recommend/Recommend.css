@@ -19,8 +19,8 @@
     box-sizing: content-box;
     height: 4rem;
     width: 4rem;
-}
+}   
 
-.recommend:not(:last-child) {
+.recommend__photo:not(:last-child) {
     margin-right: -2rem;
 }

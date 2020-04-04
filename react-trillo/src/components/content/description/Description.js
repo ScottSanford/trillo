@@ -12,7 +12,7 @@ export default function Description() {
             </p>
         <p className="paragraph">
           Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
-            </p>
+        </p>
         <BenefitsList />
         <Recommend />
       </div>
