@@ -2,6 +2,71 @@
     display: flex;
 }
 
+/* Flex Item */
+.sidebar {
+    background-color: var(--color-grey-dark-1);
+    display: flex;
+    flex: 0 0 18%; /* no grow, no shrink, keep width at 18% */
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Flex Item */
+.hotel-view {
+    background-color: var(--color-white);
+    flex: 1; /* grow as much space as you can */
+}
+
+.detail {
+    background-color: var(--color-grey-light-1);
+    border-bottom: var(--line);
+    display: flex;
+    font-size: 1.4rem;
+    padding: 4.5rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .detail {
+        padding: 3rem;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .detail {
+        flex-direction: column;
+    }
+}
+
+.description {
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-light-1);
+    flex: 0 0 60%;
+    margin-right: 4.5rem;
+    padding: 3rem;
+
+}
+
+@media only screen and (max-width: 56.25em) {
+    .description {
+        padding: 2rem;
+        margin-right: 3rem;
+    }
+}
+
+@media only screen and (max-width: 37.5em) {
+    .description {
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+}
+
+.user-reviews {
+    align-items: center;
+    display: flex;
+    flex: 1; /* occupy remaining space */
+    flex-direction: column;
+}
+
 @media only screen and (max-width: 56.25em) {
     .content {
         flex-direction: column;
@@ -166,10 +231,10 @@
 }
 
 @media only screen and (max-width: 37.5em) {
-  .overview__heading {
-    font-size: 1.8rem;
-    padding: 1.25rem 2rem;
-  }
+    .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem;
+    }
 }
 
 .overview__stars {
@@ -207,9 +272,9 @@
 }
 
 @media only screen and (max-width: 37.5em) {
-  .overview__rating {
-    padding: 0 1.5rem;
-  }
+    .overview__rating {
+        padding: 0 1.5rem;
+    }
 }
 
 .overview__rating-average {
@@ -219,9 +284,9 @@
 }
 
 @media only screen and (max-width: 37.5em) {
-  .overview__rating-average {
-    font-size: 1.8rem;
-  }
+    .overview__rating-average {
+        font-size: 1.8rem;
+    }
 }
 .overview__rating-count {
     font-size: 0.8rem;
@@ -229,9 +294,9 @@
 }
 
 @media only screen and (max-width: 37.5em) {
-  .overview__rating-count {
-    font-size: 0.5rem;
-  }
+    .overview__rating-count {
+        font-size: 0.5rem;
+    }
 }
 
 /* PARAGRAPH */
@@ -265,17 +330,17 @@
     /* Older Browsers */
     background-image: url('/img/chevron-thin-right.svg');
     background-size: cover;
-  }
+}
 /* Newer browsers -- masks */
 @supports ((mask-image: url()) or (-webkit-mask-image: url())) {
-  .list__item::before {
-    background-color: var(--color-primary);
-    -webkit-mask-image: url('/img/chevron-thin-right.svg');
-    -webkit-mask-size: cover;
-    mask-image: url('/img/chevron-thin-right.svg');
-    mask-size: cover;
-    background-image: none; /* background image is still being applied */
-  }
+    .list__item::before {
+        background-color: var(--color-primary);
+        -webkit-mask-image: url('/img/chevron-thin-right.svg');
+        -webkit-mask-size: cover;
+        mask-image: url('/img/chevron-thin-right.svg');
+        mask-size: cover;
+        background-image: none; /* background image is still being applied */
+    }
 }
 
 /* RECOMMEND */
@@ -392,12 +457,11 @@
     font-weight: 300;
     margin-bottom: 2.5rem;
     text-transform: uppercase;
+}
 
-  }
-
-  @media only screen and (max-width: 37.5em) {
+@media only screen and (max-width: 37.5em) {
     .cta__book-now {
-      padding: 0 2rem;
+        padding: 0 2rem;
     }
 }
 
