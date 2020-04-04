@@ -1,21 +1,31 @@
 import React from 'react'
 import './Gallery.css'
 
+const hotelImages = [
+  { img: 'img/hotel-1.jpg', description: 'Hotel Nightlife', caption: 'Vibrant Nightlife'},
+  { img: 'img/hotel-2.jpg', description: 'Hotel Pools', caption: 'Luxury Pools'},
+  { img: 'img/hotel-3.jpg', description: 'Amazing Views', caption: 'Stunning Views'},
+]
+
 export default function Gallery() {
+
+  const photos = hotelImages.map(image => <Photo photo={image} />)
+
   return (
     <div className="gallery">
-      <figure className="gallery__item">
-        <img src="img/hotel-1.jpg" alt="Photo of Hotel 1" className="gallery__photo" />
-        <figcaption className="gallery__caption">Vibrant Nightlife</figcaption>
-      </figure>
-      <figure className="gallery__item">
-        <img src="img/hotel-2.jpg" alt="Photo of Hotel 2" className="gallery__photo" />
-        <figcaption className="gallery__caption">Luxury Pools</figcaption>
-      </figure>
-      <figure className="gallery__item">
-        <img src="img/hotel-3.jpg" alt="Photo of Hotel 3" className="gallery__photo" />
-        <figcaption className="gallery__caption">Stunning Views</figcaption>
-      </figure>
+      {photos}
     </div>
+  )
+}
+
+function Photo({ photo }) {
+
+  const { img, description, caption } = photo
+
+  return (
+    <figure className="gallery__item">
+      <img src={img} alt={description} className="gallery__photo" />
+      <figcaption className="gallery__caption">{caption}</figcaption>
+    </figure>
   )
 }
