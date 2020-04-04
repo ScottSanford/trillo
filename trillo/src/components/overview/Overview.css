@@ -1,0 +1,83 @@
+/* HOTEL OVERVIEW */
+.overview {
+    align-items: center;
+    border-bottom: var(--line);
+    display: flex;
+}
+
+.overview__heading {
+    font-size: 2.25rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1.5rem 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem;
+    }
+}
+
+.overview__stars {
+    display: flex;
+    flex: 1;
+    margin-right: auto;
+}
+.overview__icon-star,
+.overview__icon-location {
+    fill: var(--color-primary);
+    height: 1.75rem;
+    width: 1.75rem;
+}
+
+.overview__location {
+    align-items: center;
+    display: flex;
+    font-size: 1.2rem;
+}
+
+.overview__icon-location {
+    margin-right: 0.5rem;
+}
+
+.overview__rating {
+    align-self: stretch;
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    margin-left: 3rem;
+    padding: 0 2.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .overview__rating {
+        padding: 0 1.5rem;
+    }
+}
+
+.overview__rating-average {
+    font-size: 2.25rem;
+    font-weight: 300;
+    margin-bottom: -3px;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .overview__rating-average {
+        font-size: 1.8rem;
+    }
+}
+.overview__rating-count {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .overview__rating-count {
+        font-size: 0.5rem;
+    }
+}
