@@ -27,3 +27,51 @@
 .u--margin-bottom-small {
     margin-bottom: 2rem;
 }
+
+.btn-inline {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid currentColor; /* currentColor allows the hover color to change as well */
+    color: var(--color-primary);
+    cursor: pointer;
+    display: inline-block;
+    font-size: inherit;
+    padding-bottom: 2px;
+    transition: all .2s;
+	
+}
+
+.btn-inline span {
+	margin-left: .3rem;
+	transition: margin-left .2s;
+}
+
+.btn-inline:hover {
+	color: var(--color-grey-dark-1);
+}
+
+.btn-inline:hover span {
+	margin-left: 8px;
+}
+
+.btn-inline:focus {
+	animation: pulsate 1s infinite;
+	outline: none;
+}
+
+@keyframes pulsate {
+    0% {
+        box-shadow: none;
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 1rem 4rem rgba(0,0,0, .25);
+        transform: scale(1.05);
+    }
+
+    100% {
+        box-shadow: none;
+        transform: scale(1);
+    }
+}
