@@ -3,7 +3,7 @@ import './Gallery.css'
 
 export default function Gallery({ images }) {
 
-  const photos = images.map(image => <Photo photo={image} />)
+  const photos = images.map(image => <Photo key={image.caption} photo={image} />)
 
   return (
     <div className="gallery">
