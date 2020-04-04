@@ -1,13 +1,15 @@
-.container {
+.App {
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark-1);
   margin: 8rem auto;
   max-width: 120rem;  /* 1200px */
   min-height: 50rem;
+}
 
-  @media only screen and (max-width: 68.75em) {
-      margin: 0;
-      max-width: 100%;
-      width: 100%;
+@media only screen and (max-width: 68.75em) {
+  .App {
+    margin: 0;
+    max-width: 100%;
+    width: 100%;
   }
 }
