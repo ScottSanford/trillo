@@ -6,9 +6,7 @@ export default function Header() {
 	return (
 		<div className="header">
 			<img src="../../img/logo.png"alt="Trillo Logo" className="logo" />
-
-      {/* Search Input */}
-      <SearchInput />
+            <SearchInput />
 
       <nav className="user-nav">
             <div className="user-nav__icon-box user-nav__notify">
