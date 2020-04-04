@@ -2,12 +2,6 @@
     display: flex;
 }
 
-/* Flex Item */
-.hotel-view {
-    background-color: var(--color-white);
-    flex: 1; /* grow as much space as you can */
-}
-
 /* CALL TO ACTION */
 .btn {
     background-image: linear-gradient(
