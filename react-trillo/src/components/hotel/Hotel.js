@@ -7,9 +7,11 @@ import Overview from '../overview/Overview'
 
 export default function Hotel({ details }) {
 
+  const { hotelImages } = details
+
   return (
     <main className="hotel-view">
-      <Gallery />
+      <Gallery images={hotelImages} />
       <Overview hotel={details} />
       <Details />
       <CallToAction />
