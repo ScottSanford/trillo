@@ -1,10 +1,13 @@
 import React from 'react'
 import './Overview.css'
 
-export default function Overview() {
+export default function Overview({ hotel }) {
+
+  const { name, location, overallRatingAvg, overallRatingCount } = hotel
+
 	return (
 		<div className="overview">
-          <h1 className="overview__heading">Hotel Las Palmas</h1>
+          <h1 className="overview__heading">{name}</h1>
           <div className="overview__stars">
             <svg className="overview__icon-star">
               <use xlinkHref="img/sprite.svg#icon-star" />
@@ -26,12 +29,12 @@ export default function Overview() {
             <svg className="overview__icon-location">
               <use xlinkHref="img/sprite.svg#icon-location-pin" />
             </svg>
-            <button className="btn-inline">Albufeira, Portugal</button>
+            <button className="btn-inline">{location}</button>
           </div>
 
           <div className="overview__rating">
-            <div className="overview__rating-average">8.6</div>
-            <div className="overview__rating-count">429 votes</div>
+            <div className="overview__rating-average">{overallRatingAvg}</div>
+            <div className="overview__rating-count">{overallRatingCount} votes</div>
           </div>
         </div>
 	)

@@ -5,6 +5,7 @@ export default function UserReview({ review }) {
 
   const {
       firstName,
+      id,
       lastName,
       profileImg,
       rating,

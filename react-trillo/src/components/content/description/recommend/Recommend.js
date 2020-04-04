@@ -12,7 +12,7 @@ export default function Recommend() {
 
   const recommendFriendImages = friendRecommendList.map(friend => {
     return (
-      <img src={friend.img} alt={friend.name} className="recommend__photo" />
+      <img key={friend.name} src={friend.img} alt={friend.name} className="recommend__photo" />
     )
   })
 
