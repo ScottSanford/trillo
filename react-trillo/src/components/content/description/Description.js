@@ -3,6 +3,17 @@ import './Description.css'
 import Recommend from './recommend/Recommend'
 import BenefitsList from './benefits-list/Benefits-List'
 
+const benefits = [
+  'Close to the beach',
+  'Breakfast included',
+  'Free airport shuttle',
+  'Free wifi in all rooms',
+  'Air conditioning and heating',
+  'Pets allowed',
+  'We speak all languages',
+  'Perfect for families',
+]
+
 export default function Description() {
 	return (
 		<div className="description">
@@ -13,7 +24,7 @@ export default function Description() {
         <p className="paragraph">
           Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
         </p>
-        <BenefitsList />
+        <BenefitsList benefits={benefits} />
         <Recommend />
       </div>
 	)
