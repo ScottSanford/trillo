@@ -1,0 +1,24 @@
+/* CALL TO ACTION */
+.cta {
+    padding: 3.5rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 56.25em) {
+    .cta {
+        padding: 2.5rem 0;
+    }
+}
+
+.cta__book-now {
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 2.5rem;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 37.5em) {
+    .cta__book-now {
+        padding: 0 2rem;
+    }
+}
