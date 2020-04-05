@@ -30,10 +30,4 @@ describe('Recommend Component', () => {
 		const wrapper = shallow(<Recommend list={data} />)
 		expect(wrapper.find('.recommend__friends').children()).toHaveLength(2)
 	})
-
-	it('should have a recommend count description element', () => {
-
-		const wrapper = shallow(<Recommend />)
-		expect(wrapper.find('.recommend__count')).toBeTruthy()
-	})
 })
