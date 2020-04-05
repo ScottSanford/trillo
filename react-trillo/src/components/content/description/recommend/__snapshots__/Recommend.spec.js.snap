@@ -1,3 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Recommend Component should render correctly with no props 1`] = `""`;
+exports[`Recommend Component should match the snapshot 1`] = `
+<div
+  className="recommend"
+>
+  <p
+    className="recommend__count"
+  >
+    Lucy and 3 other friends recommend this hotel.
+  </p>
+  <div
+    className="recommend__friends"
+  />
+</div>
+`;

@@ -4,9 +4,13 @@ import Recommend from './Recommend'
 
 describe('Recommend Component', () => {
 
-	it('should render correctly with no props', () => {
+	const minProps = {
+		list: []
+	}
 
-		const wrapper = shallow(<Recommend />)
+	it('should match the snapshot', () => {
+
+		const wrapper = shallow(<Recommend {...minProps} />)
 		expect(wrapper).toMatchSnapshot()
 	})
 
