@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Description Component should render correctly with no props 1`] = `
+<div
+  className="description"
+>
+  <p
+    className="paragraph"
+  >
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi nisi dignissimos debitis ratione sapiente saepe. Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate.
+  </p>
+  <p
+    className="paragraph"
+  >
+    Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
+  </p>
+  <BenefitsList />
+  <Recommend />
+</div>
+`;

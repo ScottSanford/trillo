@@ -14,7 +14,7 @@ export default function Description({ benefits, recommended }) {
           Accusantium cumque, quas, ut corporis incidunt deserunt quae architecto voluptate delectus, inventore iure aliquid aliquam.
         </p>
         <BenefitsList benefits={benefits} />
-        <Recommend list={recommended  } />
+        <Recommend list={recommended} />
       </div>
 	)
 }
