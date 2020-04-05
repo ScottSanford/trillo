@@ -6,7 +6,7 @@ import CallToAction from '../call-to-action/Call-to-action'
 import Overview from '../overview/Overview'
 import UserReviews from '../content/user-reviews/User-Reviews'
 
-export default function Hotel({ details = {} }) {
+export default function Hotel({ details }) {
 
   const { benefits, hotelImages, recommended, reviews} = details
 

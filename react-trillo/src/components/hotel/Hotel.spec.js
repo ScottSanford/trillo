@@ -2,10 +2,15 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import Hotel from './Hotel'
 
-describe('Hotel Component', () => {
+describe('<Hotel /> Component', () => {
 
-	it('should render correctly', () => {
-		const wrapper = shallow(<Hotel />)
+	const minProps = {
+		details: {}
+	} 
+
+	it('renders without exploding', () => {
+		const wrapper = shallow(<Hotel {...minProps} />)
 		expect(wrapper).toMatchSnapshot()
+		expect(wrapper.length).toEqual(1)
 	})
 })
