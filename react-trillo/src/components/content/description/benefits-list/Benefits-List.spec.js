@@ -4,8 +4,12 @@ import BenefitsList from './Benefits-List'
 
 describe('Benefits List Component', () => {
 
-	it('should render correctly with no props', () => {
-		const wrapper = shallow(<BenefitsList />)
+	const minProps = {
+		benefits: []
+	}
+
+	it('should render correctly', () => {
+		const wrapper = shallow(<BenefitsList {...minProps} />)
 		expect(wrapper).toMatchSnapshot()
 	})
 

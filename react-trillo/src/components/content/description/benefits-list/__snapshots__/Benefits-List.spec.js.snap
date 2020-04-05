@@ -6,7 +6,11 @@ exports[`Benefits List Component should render 0 benefits if none are passed 1`]
 />
 `;
 
-exports[`Benefits List Component should render correctly with no props 1`] = `""`;
+exports[`Benefits List Component should render correctly 1`] = `
+<ul
+  className="list"
+/>
+`;
 
 exports[`Benefits List Component should render the benefits list of 2 items 1`] = `
 <ul
