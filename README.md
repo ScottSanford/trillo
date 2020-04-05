@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./img/ss.png" width="600"/>
+  <img src="./static-trillo/img/ss.png" width="600"/>
 </p>
 
 ## Trillo
