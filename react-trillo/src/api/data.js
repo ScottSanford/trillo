@@ -1,7 +1,7 @@
 /**
  * Mock Data. This should come from an API.
  * Sometimes it's great to work backwards and start with the components with some fake data.
- * Once you have some data, then 
+ * Once you have some data, then you can start to build out the API.
  */
 export const hotelData = {
   name: 'Hotel Las Palmas',
