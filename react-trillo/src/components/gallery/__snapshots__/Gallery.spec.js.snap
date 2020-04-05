@@ -1,11 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Gallery Component should match the snapshopt 1`] = `
-<div
-  className="gallery"
-/>
-`;
-
 exports[`Gallery Component should match the snapshot 1`] = `
 <div
   className="gallery"

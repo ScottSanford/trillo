@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Component should match snapshot 1`] = `
+<div
+  className="header"
+>
+  <img
+    alt="Trillo Logo"
+    className="logo"
+    src="../../img/logo.png"
+  />
+  <SearchInput />
+  <Navigation />
+</div>
+`;
