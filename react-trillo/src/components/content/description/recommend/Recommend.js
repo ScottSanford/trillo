@@ -3,9 +3,20 @@ import './Recommend.css'
 
 export default function Recommend({ list }) {
 
+  if (!list) {
+    return null
+  }
+
   const recommendFriendImages = list.map(friend => {
+
+    const { img, name } = friend
+    // If data returns no image, exclude image element from UI
+    if (!img) {
+      return
+    }
+
     return (
-      <img key={friend.name} src={friend.img} alt={friend.name} className="recommend__photo" />
+      <img key={name} src={img} alt={name} className="recommend__photo" />
     )
   })
 
