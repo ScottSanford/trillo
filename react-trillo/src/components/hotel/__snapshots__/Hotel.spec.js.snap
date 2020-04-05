@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hotel Component should render correctly 1`] = `
+<main
+  className="hotel-view"
+>
+  <Gallery />
+  <Overview
+    hotel={Object {}}
+  />
+  <div
+    className="detail"
+  >
+    <Description />
+    <UserReviews />
+  </div>
+  <CallToAction />
+</main>
+`;
