@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Content Component should match snapshot 1`] = `
+<div
+  className="content"
+>
+  <Sidebar />
+  <Hotel
+    details={
+      Object {
+        "benefits": Array [
+          "Close to the beach",
+          "Breakfast included",
+          "Free airport shuttle",
+          "Free wifi in all rooms",
+          "Air conditioning and heating",
+          "Pets allowed",
+          "We speak all languages",
+          "Perfect for families",
+        ],
+        "hotelImages": Array [
+          Object {
+            "caption": "Vibrant Nightlife",
+            "description": "Hotel Nightlife",
+            "img": "img/hotel-1.jpg",
+          },
+          Object {
+            "caption": "Luxury Pools",
+            "description": "Hotel Pools",
+            "img": "img/hotel-2.jpg",
+          },
+          Object {
+            "caption": "Stunning Views",
+            "description": "Amazing Views",
+            "img": "img/hotel-3.jpg",
+          },
+        ],
+        "location": "Albufeira, Portugal",
+        "name": "Hotel Las Palmas",
+        "overallRatingAvg": 8.6,
+        "overallRatingCount": 429,
+        "recommended": Array [
+          Object {
+            "img": "img/user-3.jpg",
+            "name": "Friend 1",
+          },
+          Object {
+            "img": "img/user-4.jpg",
+            "name": "Friend 2",
+          },
+          Object {
+            "img": "img/user-5.jpg",
+            "name": "Friend 3",
+          },
+          Object {
+            "img": "img/user-6.jpg",
+            "name": "Friend 4",
+          },
+        ],
+        "reviews": Array [
+          Object {
+            "firstName": "Nick",
+            "id": "32fqp9jakf",
+            "lastName": "Smith",
+            "profileImg": "img/user-1.jpg",
+            "rating": "7.8",
+            "reviewDate": "Feb 23rd, 2020",
+            "reviewText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi, totam, itaque officiaex.",
+          },
+          Object {
+            "firstName": "Mary",
+            "id": "2e09ijaadd",
+            "lastName": "Thomas",
+            "profileImg": "img/user-2.jpg",
+            "rating": "9.3",
+            "reviewDate": "Feb 23rd, 2020",
+            "reviewText": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga doloremque architecto dicta animi.",
+          },
+        ],
+      }
+    }
+  />
+</div>
+`;
