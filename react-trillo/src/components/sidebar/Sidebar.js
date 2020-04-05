@@ -13,7 +13,7 @@ export default function Sidebar() {
 
   const navList = menu.map(anItem => <NavItem item={anItem} /> )
 
-  return (  
+  return (
     <nav className="sidebar">
       <ul className="side-nav">
         {navList}
@@ -21,7 +21,7 @@ export default function Sidebar() {
 
       <div className="legal">
         &copy; 2018 by Trillo. All rights reserved.
-        </div>
+      </div>
     </nav>
   )
 }
