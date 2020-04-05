@@ -1,42 +1,40 @@
 import React from 'react'
 import './Sidebar.css'
 
+const menu = [
+  { icon: 'home', title: 'Hotel' },
+  { icon: 'aircraft-take-off', title: 'Flight' },
+  { icon: 'key', title: 'Car Rental' },
+  { icon: 'map', title: 'Tours' },
+]
+
 export default function Sidebar() {
+
+  const navList = menu.map(anItem => {
+
+    const { icon, title } = anItem
+    const isFirst = anItem.icon === 'home'
+      ? 'side-nav__item--active'
+      : ''
+
+    const navItemClasses = `side-nav__item ${isFirst}`
+
+    return (
+      <li key={icon} className={navItemClasses}>
+        <a href="#" className="side-nav__link">
+          <svg className="side-nav__icon">
+            <use xlinkHref={`img/sprite.svg#icon-${icon}`} />
+          </svg>
+          <span>{title}</span>
+        </a>
+      </li>
+    )
+  })
+
   return (
     <nav className="sidebar">
       <ul className="side-nav">
-        <li className="side-nav__item side-nav__item--active">
-          <a href="#" className="side-nav__link">
-            <svg className="side-nav__icon">
-              <use xlinkHref="img/sprite.svg#icon-home" />
-            </svg>
-            <span>Hotel</span>
-          </a>
-        </li>
-        <li className="side-nav__item">
-          <a href="#" className="side-nav__link">
-            <svg className="side-nav__icon">
-              <use xlinkHref="img/sprite.svg#icon-aircraft-take-off" />
-            </svg>
-            <span>Flight</span>
-          </a>
-        </li>
-        <li className="side-nav__item">
-          <a href="#" className="side-nav__link">
-            <svg className="side-nav__icon">
-              <use xlinkHref="img/sprite.svg#icon-key" />
-            </svg>
-            <span>Car Rental</span>
-          </a>
-        </li>
-        <li className="side-nav__item">
-          <a href="#" className="side-nav__link">
-            <svg className="side-nav__icon">
-              <use xlinkHref="img/sprite.svg#icon-map" />
-            </svg>
-            <span>Tours</span>
-          </a>
-        </li>
+        {navList}
       </ul>
 
       <div className="legal">
