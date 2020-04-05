@@ -1,5 +1,6 @@
 import React from 'react'
 import './Sidebar.css'
+import NavItem from './NavItem'
 
 const menu = [
   { icon: 'home', title: 'Hotel' },
@@ -10,28 +11,9 @@ const menu = [
 
 export default function Sidebar() {
 
-  const navList = menu.map(anItem => {
+  const navList = menu.map(anItem => <NavItem item={anItem} /> )
 
-    const { icon, title } = anItem
-    const isFirst = anItem.icon === 'home'
-      ? 'side-nav__item--active'
-      : ''
-
-    const navItemClasses = `side-nav__item ${isFirst}`
-
-    return (
-      <li key={icon} className={navItemClasses}>
-        <a href="#" className="side-nav__link">
-          <svg className="side-nav__icon">
-            <use xlinkHref={`img/sprite.svg#icon-${icon}`} />
-          </svg>
-          <span>{title}</span>
-        </a>
-      </li>
-    )
-  })
-
-  return (
+  return (  
     <nav className="sidebar">
       <ul className="side-nav">
         {navList}
