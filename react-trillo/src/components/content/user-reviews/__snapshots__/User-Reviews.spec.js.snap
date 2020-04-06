@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserReviews Component should match snapshot 1`] = `
+<div
+  className="user-reviews"
+>
+  <button
+    className="btn-inline"
+  >
+    Show all 
+    <span>
+      →
+    </span>
+  </button>
+</div>
+`;

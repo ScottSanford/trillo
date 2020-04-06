@@ -1,5 +1,5 @@
 import React from 'react'
-import './search-input.css'
+import './Search-Input.css'
 
 export default function SearchInput() {
 	return (
