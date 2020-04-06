@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overview Component should match snapshot 1`] = `
+<div
+  className="overview"
+>
+  <h1
+    className="overview__heading"
+  />
+  <div
+    className="overview__stars"
+  >
+    <svg
+      className="overview__icon-star"
+    >
+      <use
+        xlinkHref="img/sprite.svg#icon-star"
+      />
+    </svg>
+    <svg
+      className="overview__icon-star"
+    >
+      <use
+        xlinkHref="img/sprite.svg#icon-star"
+      />
+    </svg>
+    <svg
+      className="overview__icon-star"
+    >
+      <use
+        xlinkHref="img/sprite.svg#icon-star"
+      />
+    </svg>
+    <svg
+      className="overview__icon-star"
+    >
+      <use
+        xlinkHref="img/sprite.svg#icon-star"
+      />
+    </svg>
+    <svg
+      className="overview__icon-star"
+    >
+      <use
+        xlinkHref="img/sprite.svg#icon-star"
+      />
+    </svg>
+  </div>
+  <div
+    className="overview__location"
+  >
+    <svg
+      className="overview__icon-location"
+    >
+      <use
+        xlinkHref="img/sprite.svg#icon-location-pin"
+      />
+    </svg>
+    <button
+      className="btn-inline"
+    />
+  </div>
+  <div
+    className="overview__rating"
+  >
+    <div
+      className="overview__rating-average"
+    />
+    <div
+      className="overview__rating-count"
+    >
+       votes
+    </div>
+  </div>
+</div>
+`;
