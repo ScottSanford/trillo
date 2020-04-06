@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sidebar Component should match snapshot 1`] = `
+<nav
+  className="sidebar"
+>
+  <ul
+    className="side-nav"
+  >
+    <NavItem
+      item={
+        Object {
+          "icon": "home",
+          "title": "Hotel",
+        }
+      }
+      key="home"
+    />
+    <NavItem
+      item={
+        Object {
+          "icon": "aircraft-take-off",
+          "title": "Flight",
+        }
+      }
+      key="aircraft-take-off"
+    />
+    <NavItem
+      item={
+        Object {
+          "icon": "key",
+          "title": "Car Rental",
+        }
+      }
+      key="key"
+    />
+    <NavItem
+      item={
+        Object {
+          "icon": "map",
+          "title": "Tours",
+        }
+      }
+      key="map"
+    />
+  </ul>
+  <div
+    className="legal"
+  >
+    © 2018 by Trillo. All rights reserved.
+  </div>
+</nav>
+`;

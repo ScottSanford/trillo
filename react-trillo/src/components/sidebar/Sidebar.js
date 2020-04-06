@@ -11,7 +11,7 @@ const menu = [
 
 export default function Sidebar() {
 
-  const navList = menu.map(anItem => <NavItem item={anItem} /> )
+  const navList = menu.map(anItem => <NavItem key={anItem.icon} item={anItem} /> )
 
   return (
     <nav className="sidebar">
