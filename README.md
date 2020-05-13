@@ -16,7 +16,6 @@ Clone down this repository. You will need `node` and `npm` installed globally on
 `npm start`  
 
 ## Reflection
-This was a project built during the [Udemy Course: Advanced CSS & SASS: Flexbox, Grid, Animations and More!](https://www.udemy.com/advanced-css-and-sass/) Project goals included... 
 
 * BEM Methodology
 * Flexbox Layout
